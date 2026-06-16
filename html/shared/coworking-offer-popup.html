@@ -1,0 +1,36 @@
+<div class="lh-coworking-offer" data-lh-coworking-offer role="dialog" aria-modal="true" aria-labelledby="lh-coworking-offer-title" hidden>
+  <button class="lh-coworking-offer__backdrop" type="button" data-lh-coworking-offer-close aria-label="Close free coworking day offer"></button>
+  <div class="lh-coworking-offer__panel">
+    <button class="lh-coworking-offer__close" type="button" data-lh-coworking-offer-close aria-label="Close free coworking day offer">&times;</button>
+    <div class="lh-coworking-offer__copy">
+      <p class="lh-coworking-offer__eyebrow">Free coworking day</p>
+      <h2 id="lh-coworking-offer-title">Try Lambourne House for a day.</h2>
+      <p>Spend a day in our coworking space, meet the team and see whether the rhythm feels right for you.</p>
+    </div>
+    <form class="lh-coworking-offer__form" action="{{admin_post_url}}" method="post" data-lh-coworking-offer-form>
+      <input type="hidden" name="action" value="lh_coworking_day_request">
+      <input type="hidden" name="lh_source_url" value="{{current_url}}">
+      {{coworking_offer_nonce}}
+      <div class="lh-coworking-offer__fields">
+        <label>
+          <span>Name *</span>
+          <input type="text" name="lh_name" autocomplete="name" required>
+        </label>
+        <label>
+          <span>Email *</span>
+          <input type="email" name="lh_email" autocomplete="email" required>
+        </label>
+        <label>
+          <span>Phone *</span>
+          <input type="tel" name="lh_phone" autocomplete="tel" required>
+        </label>
+        <label>
+          <span>Preferred date *</span>
+          <input type="date" name="lh_preferred_date" required>
+        </label>
+      </div>
+      <button class="lh-coworking-offer__submit" type="submit">Send</button>
+      <p class="lh-coworking-offer__note">We will confirm your date with you before anything is booked in.</p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<section class="lh-contact-hero">
+  <div class="lh-contact-hero__inner">
+    <p class="lh-contact-hero__eyebrow">Contact Lambourne House</p>
+    <h1>Get in touch with us by completing the form or calling the team.</h1>
+  </div>
+</section>
+
+<section class="lh-contact-panel">
+  <div class="lh-contact-panel__details">
+    <h2>Contact details</h2>
+    <div class="lh-contact-card">
+      <span>Address</span>
+      <p>Lambourne House, Llanishen Business Park, Cardiff CF14 5GL</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Lambourne%20House%20Llanishen%20Business%20Park%20Cardiff%20CF14%205GL" target="_blank" rel="noreferrer noopener">Get directions &rarr;</a>
+    </div>
+    <div class="lh-contact-card">
+      <span>Phone</span>
+      <p><a href="tel:02920827550">029 2082 7550</a></p>
+    </div>
+    <div class="lh-contact-card">
+      <span>Email</span>
+      <p><a href="mailto:enquiries@lambourne.house">enquiries@lambourne.house</a></p>
+    </div>
+  </div>
+
+  <div class="lh-contact-form-wrap">
+    <form class="lh-contact-form" action="{{admin_post_url}}" method="post">
+      <input type="hidden" name="action" value="lh_contact_request">
+      {{contact_form_nonce}}
+      <h2>Contact us</h2>
+      <div class="lh-contact-form__grid">
+        <label>
+          <span>Name *</span>
+          <input type="text" name="lh_name" required>
+        </label>
+        <label>
+          <span>Company</span>
+          <input type="text" name="lh_company">
+        </label>
+        <label>
+          <span>Email *</span>
+          <input type="email" name="lh_email" required>
+        </label>
+        <label>
+          <span>Phone *</span>
+          <input type="tel" name="lh_phone" required>
+        </label>
+      </div>
+      <label>
+        <span>What area are you interested in? *</span>
+        <select name="lh_interest" required>
+          <option value="">Please choose</option>
+          <option>Events &amp; Conference Space</option>
+          <option>Meeting Rooms</option>
+          <option>Office Space</option>
+          <option>Coworking Space</option>
+        </select>
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="lh_message" rows="5"></textarea>
+      </label>
+      <button type="submit">Send a request</button>
+    </form>
+  </div>
+</section>
+
+<section class="lh-contact-location">
+  <div class="lh-contact-location__map">
+    <iframe title="Lambourne House location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Lambourne%20House%20Llanishen%20Business%20Park%20Cardiff%20CF14%205GL&output=embed"></iframe>
+  </div>
+  <div class="lh-contact-location__copy">
+    <p class="lh-contact-location__eyebrow">Our location</p>
+    <h2>Lambourne House</h2>
+    <p>Situated in Llanishen, North Cardiff, Lambourne House is close to local amenities including M&amp;S, Morrisons, Home Sense and Starbucks. Llanishen railway station provides commuter links to central Cardiff and the surrounding area.</p>
+  </div>
+</section>
+
+<section class="lh-contact-company">
+  <div class="lh-contact-company__inner">
+    <h2>Company details</h2>
+    <p>Lambourne House is a trading name of New Directions Holdings Limited, registered in England and Wales.</p>
+    <p>Company No: 05714010<br>VAT No: 123 3683 30</p>
+    <p>New Directions Holdings Limited is part of the <a href="https://www.new-directions.co.uk/" target="_blank" rel="noreferrer noopener">New Directions Group of Companies</a>.</p>
+    <p>Please note all calls may be recorded for quality and training purposes.</p>
+  </div>
+</section>
