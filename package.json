@@ -1,0 +1,13 @@
+{
+  "name": "lambourne-house-preview",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static visual preview for the Lambourne House WordPress theme.",
+  "scripts": {
+    "build": "node scripts/build-static-preview.mjs",
+    "preview:build": "node scripts/build-static-preview.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

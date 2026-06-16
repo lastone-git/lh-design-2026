@@ -44,3 +44,13 @@ Keep the server window open while previewing. Press `Ctrl+C` to stop it.
 The static preview renders the same HTML partials, CSS, JS, images, and videos from this theme folder. It does not run WordPress admin, plugins, database content, or real contact-form email sending.
 
 More detail is in `LOCAL_PREVIEW.md`.
+
+## Vercel Static Preview
+
+This theme also includes a Node-based static preview build for Vercel:
+
+```powershell
+npm run build
+```
+
+The build outputs static files to `dist-preview`. See `VERCEL_PREVIEW.md` for the files to upload and the Vercel project settings.
