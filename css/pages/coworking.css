@@ -1,0 +1,527 @@
+/* Coworking page sections. */
+
+.lh-coworking-page {
+  background: var(--lh-color-white);
+}
+
+.lh-coworking-hero {
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  padding: 116px 16px 66px;
+}
+
+@media (max-width: 767px) {
+  .lh-coworking-hero.lh-split-hero::after {
+    left: clamp(-420px, -76vw, -224px);
+    width: clamp(1280px, 296vw, 1800px);
+    transform: translate3d(0, 6%, 0);
+  }
+}
+
+.lh-coworking-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: min(var(--lh-container-wide), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(42px, 7vw, 110px);
+  align-items: center;
+}
+
+.lh-coworking-hero__copy {
+  max-width: 720px;
+}
+
+.lh-coworking-hero__eyebrow,
+.lh-coworking-intro__kicker {
+  margin: 0 0 16px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.lh-coworking-hero h1 {
+  margin: 0;
+  font-size: clamp(36px, 12vw, 56px);
+  line-height: 0.98;
+  font-weight: 400;
+}
+
+.lh-coworking-hero__copy > p:not(.lh-coworking-hero__eyebrow) {
+  max-width: 570px;
+  margin: 28px 0 0;
+  color: rgba(var(--lh-color-white-rgb), 0.82);
+  font-size: clamp(16px, 1.7vw, 21px);
+  line-height: 1.65;
+}
+
+.lh-coworking-hero__image-wrap {
+  justify-self: center;
+  width: min(82vw, 350px);
+  aspect-ratio: 1;
+  padding: clamp(5px, 0.6vw, 8px);
+  border-radius: 50%;
+  background: var(--lh-color-white);
+  box-shadow: 0 34px 90px rgba(var(--lh-color-black-rgb), 0.18);
+}
+
+.lh-coworking-hero__image {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-size: cover;
+  background-position: center;
+}
+
+.lh-coworking-intro {
+  padding: clamp(58px, 7vw, 104px) 16px clamp(34px, 5vw, 70px);
+}
+
+.lh-coworking-intro__inner {
+  width: min(var(--lh-container-wide), 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lh-coworking-intro__kicker {
+  color: var(--lh-color-orange);
+}
+
+.lh-coworking-intro__lead {
+  max-width: 860px;
+  margin: 0 auto;
+  color: var(--lh-color-green-dark);
+  font-size: clamp(22px, 3vw, 38px);
+  line-height: 1.24;
+}
+
+.lh-coworking-community {
+  padding: clamp(42px, 6vw, 84px) 16px clamp(76px, 8vw, 124px);
+}
+
+.lh-coworking-community__inner {
+  width: min(var(--lh-container-wide), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(42px, 7vw, 110px);
+  align-items: center;
+}
+
+.lh-coworking-community__copy {
+  max-width: 560px;
+}
+
+.lh-coworking-community h2,
+.lh-coworking-memberships h2,
+.lh-coworking-benefits h2 {
+  margin: 0;
+  color: var(--lh-color-green-dark);
+  font-size: clamp(30px, 9vw, 46px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.lh-coworking-community__copy > p:not(.lh-coworking-intro__kicker) {
+  margin: 26px 0 0;
+  color: var(--lh-color-grey);
+  font-size: 17px;
+  line-height: 1.78;
+}
+
+.lh-coworking-community__images {
+  position: relative;
+  min-height: clamp(300px, 70vw, 460px);
+}
+
+.lh-coworking-community__images span {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 24px 72px rgba(var(--lh-color-green-dark-rgb), 0.12);
+}
+
+.lh-coworking-community__images span:nth-child(1) {
+  right: 8%;
+  top: 0;
+  width: min(52vw, 390px);
+  aspect-ratio: 1;
+}
+
+.lh-coworking-community__images span:nth-child(2) {
+  left: 0;
+  bottom: 4%;
+  width: min(36vw, 260px);
+  aspect-ratio: 1;
+}
+
+.lh-coworking-community__images span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: min(30vw, 210px);
+  aspect-ratio: 1;
+}
+
+.lh-coworking-memberships {
+  padding: clamp(66px, 8vw, 112px) 16px;
+  background: var(--lh-color-cream);
+}
+
+.lh-coworking-memberships__inner {
+  width: min(var(--lh-container-wide), 100%);
+  margin: 0 auto;
+}
+
+.lh-coworking-memberships__intro {
+  max-width: 760px;
+  margin: 0 auto clamp(34px, 5vw, 62px);
+  text-align: center;
+}
+
+.lh-coworking-plans {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: start;
+  justify-items: stretch;
+  padding-bottom: 28px;
+}
+
+.lh-coworking-plan {
+  position: relative;
+  --lh-plan-float-y: -7px;
+  --lh-plan-float-duration: 7.5s;
+  --lh-plan-float-delay: 0s;
+  width: min(82vw, 310px);
+  aspect-ratio: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(24px, 2.4vw, 34px);
+  border: 1px solid rgba(var(--lh-color-green-dark-rgb), 0.12);
+  border-radius: 50%;
+  background: var(--lh-color-white);
+  box-shadow: 0 22px 62px rgba(var(--lh-color-green-dark-rgb), 0.07);
+  text-align: center;
+  scale: 1;
+  translate: 0 0;
+  transform-origin: center;
+  animation: lh-coworking-plan-hover var(--lh-plan-float-duration) ease-in-out var(--lh-plan-float-delay) infinite;
+  transition:
+    scale 520ms cubic-bezier(0.19, 0.72, 0.2, 1),
+    border-color 520ms ease,
+    background-color 520ms ease,
+    box-shadow 520ms ease;
+  will-change: transform, translate, scale;
+}
+
+.lh-coworking-plan:hover {
+  scale: 1.045;
+  border-color: rgba(var(--lh-color-green-dark-rgb), 0.24);
+  box-shadow: 0 34px 82px rgba(var(--lh-color-green-dark-rgb), 0.14);
+}
+
+.lh-coworking-plan:nth-child(odd) {
+  justify-self: start;
+}
+
+.lh-coworking-plan:nth-child(even) {
+  justify-self: end;
+}
+
+.lh-coworking-plan:nth-child(2),
+.lh-coworking-plan:nth-child(4) {
+  margin-top: -12px;
+}
+
+@media (max-width: 640px) {
+  .lh-coworking-plans {
+    gap: 0;
+    padding-bottom: 38px;
+  }
+
+  .lh-coworking-plan:nth-child(2) {
+    margin-top: clamp(-58px, -13vw, -34px);
+  }
+
+  .lh-coworking-plan:nth-child(3) {
+    margin-top: clamp(-46px, -11vw, -28px);
+  }
+
+  .lh-coworking-plan:nth-child(4) {
+    margin-top: clamp(-42px, -9vw, -24px);
+  }
+}
+
+.lh-coworking-plan:nth-child(1) {
+  --lh-plan-float-y: -8px;
+  --lh-plan-float-duration: 7.2s;
+  --lh-plan-float-delay: -0.8s;
+}
+
+.lh-coworking-plan:nth-child(2) {
+  --lh-plan-float-y: -6px;
+  --lh-plan-float-duration: 8s;
+  --lh-plan-float-delay: -2.2s;
+}
+
+.lh-coworking-plan:nth-child(3) {
+  --lh-plan-float-y: -7px;
+  --lh-plan-float-duration: 7.7s;
+  --lh-plan-float-delay: -1.4s;
+}
+
+.lh-coworking-plan:nth-child(4) {
+  --lh-plan-float-y: -5px;
+  --lh-plan-float-duration: 8.4s;
+  --lh-plan-float-delay: -3s;
+}
+
+.lh-coworking-plan--featured {
+  margin-bottom: 34px;
+  background: var(--lh-color-green-dark);
+  color: var(--lh-color-white);
+  box-shadow: 0 28px 72px rgba(var(--lh-color-green-dark-rgb), 0.2);
+  transform: none;
+}
+
+.lh-coworking-plan--featured:hover {
+  box-shadow: 0 38px 92px rgba(var(--lh-color-green-dark-rgb), 0.26);
+}
+
+@media (max-width: 640px) {
+  .lh-coworking-plan--featured {
+    margin-bottom: 46px;
+  }
+}
+
+.lh-coworking-plan__flag {
+  position: absolute;
+  top: auto;
+  bottom: -18px;
+  left: 50%;
+  width: max-content;
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--lh-color-orange);
+  color: var(--lh-color-white);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.lh-coworking-plan__name {
+  margin: 0;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.lh-coworking-plan__price {
+  margin: 20px 0 18px;
+  color: var(--lh-color-green-dark);
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 0.95;
+}
+
+.lh-coworking-plan--featured .lh-coworking-plan__price {
+  color: var(--lh-color-green-light);
+}
+
+.lh-coworking-plan__price span {
+  display: block;
+  margin-top: 10px;
+  color: var(--lh-color-grey);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.lh-coworking-plan--featured .lh-coworking-plan__price span {
+  color: rgba(var(--lh-color-white-rgb), 0.7);
+}
+
+.lh-coworking-plan > p:last-child {
+  max-width: 24ch;
+  margin: 0;
+  color: var(--lh-color-grey);
+  font-size: 15px;
+  line-height: 1.48;
+}
+
+.lh-coworking-plan--featured > p:last-child {
+  color: rgba(var(--lh-color-white-rgb), 0.82);
+}
+
+@keyframes lh-coworking-plan-hover {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 var(--lh-plan-float-y);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lh-coworking-plan {
+    animation: none;
+    transition: none;
+  }
+}
+
+.lh-coworking-benefits {
+  padding: clamp(66px, 8vw, 112px) 16px;
+  background: var(--lh-color-white);
+}
+
+.lh-coworking-benefits__inner {
+  width: min(var(--lh-container-wide), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(38px, 6vw, 88px);
+}
+
+.lh-coworking-benefits__list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--lh-color-green-dark);
+}
+
+.lh-coworking-benefits__list li {
+  position: relative;
+  padding: 18px 0 18px 36px;
+  border-bottom: 1px solid rgba(var(--lh-color-green-dark-rgb), 0.14);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.lh-coworking-benefits__list li::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--lh-color-green-light);
+  box-shadow: 0 0 0 6px rgba(var(--lh-color-green-dark-rgb), 0.06);
+}
+
+.lh-coworking-cta {
+  padding: clamp(68px, 8vw, 112px) 16px;
+}
+
+.lh-coworking-cta__inner {
+  width: min(var(--lh-container-feature), 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lh-coworking-cta p {
+  margin: 0 auto 30px;
+  max-width: 640px;
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 1.26;
+}
+
+@media (min-width: 641px) {
+  .lh-coworking-hero h1 {
+    font-size: clamp(42px, 5.4vw, 82px);
+  }
+
+  .lh-coworking-hero__image-wrap {
+    width: min(72vw, 430px);
+  }
+
+  .lh-coworking-community h2,
+  .lh-coworking-memberships h2,
+  .lh-coworking-benefits h2 {
+    font-size: clamp(31px, 4vw, 58px);
+  }
+
+  .lh-coworking-community__images {
+    min-height: clamp(300px, 70vw, 460px);
+  }
+
+  .lh-coworking-plans {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    justify-items: center;
+    padding-bottom: clamp(36px, 6vw, 96px);
+  }
+
+  .lh-coworking-plan,
+  .lh-coworking-plan:nth-child(odd),
+  .lh-coworking-plan:nth-child(even) {
+    width: min(100%, 330px);
+    justify-self: center;
+  }
+
+  .lh-coworking-plan:nth-child(2) {
+    margin-top: clamp(34px, 4vw, 72px);
+  }
+
+  .lh-coworking-plan:nth-child(3) {
+    margin-top: clamp(18px, 2.2vw, 36px);
+  }
+
+  .lh-coworking-plan:nth-child(4) {
+    margin-top: clamp(10px, 1.4vw, 24px);
+  }
+}
+
+@media (min-width: 801px) {
+  .lh-coworking-hero {
+    min-height: clamp(600px, 86svh, 820px);
+    padding: clamp(132px, 13vw, 186px) 16px clamp(70px, 8vw, 116px);
+  }
+
+  .lh-coworking-community__images {
+    min-height: clamp(360px, 42vw, 560px);
+  }
+}
+
+@media (min-width: 1101px) {
+  .lh-coworking-hero__inner {
+    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.8fr);
+  }
+
+  .lh-coworking-hero__image-wrap {
+    width: min(100%, 520px);
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .lh-coworking-community__inner {
+    grid-template-columns: minmax(0, 0.76fr) minmax(360px, 0.9fr);
+  }
+
+  .lh-coworking-benefits__inner {
+    grid-template-columns: minmax(0, 0.76fr) minmax(320px, 0.7fr);
+  }
+
+  .lh-coworking-plans {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
